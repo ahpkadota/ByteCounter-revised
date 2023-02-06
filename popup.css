@@ -1,0 +1,149 @@
+body {
+    font-size: 60% !important;
+    min-width: 500px; /* your desired width */
+    max-width: 100%;
+    position: relative;
+    vertical-align:middle;
+    margin: 10px !important;
+  }
+.press {
+    filter: sepia();
+}
+.press:hover {
+    transform: scale(1.1);
+    cursor:pointer
+}
+
+div[aria-expanded='true'] > .caret {
+    transform: rotate(90deg);
+}
+.caret, .delete {
+    filter: opacity(50%);
+    cursor: pointer;
+}
+.caret:hover, .delete:hover {
+    transform: scale(1.1);
+}
+.select2-results__options{
+    font-size:11px !important;
+    border-top: 0px;
+    margin-top: 0px;
+}
+
+/* tags */
+.select2-container .select2-selection--multiple .select2-selection__choice {
+    font-size: 12px;
+}
+#preview {
+    font-size: 14px;
+    border-radius: 0.25rem 0rem 0rem 0.25rem !important;
+    resize: none;
+}
+.input-group-text:hover {
+    background-color:#d1d1d1;
+    cursor:pointer
+}
+.select2-container--default {
+    font-size: 14px;
+    border-radius: 0px;
+}
+.select2-container--default .select2-selection--multiple{
+    border-bottom-right-radius: 0px;
+    border-top-right-radius: 0px;
+    border-color: rgba(118, 118, 118, 0.3) !important;
+}
+.select2-selection--single {
+    border-bottom-right-radius: 0px;
+    border-top-right-radius: 0px;
+    border-color: rgba(118, 118, 118, 0.3) !important;
+}
+.select2-container--default .select2-results>.select2-results__options{
+    max-height: 320px;
+}
+
+.btn {
+    line-height: 0.5rem !important;
+}
+textarea {
+    resize: none;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+}
+.select2-container--default .select2-results__group {
+    background-color: #535c66;
+    color: rgb(230, 230, 230);
+}
+.select2-container--default .select2-selection--multiple .select2-selection__choice {
+    max-width: 45%;
+}
+#case {
+    font-size: 10px;
+    margin-top: 0.25rem;
+    margin-left: 0.5rem;
+    border-radius: 10px;
+}
+#selectText{
+    display:inline-block
+}
+#ati {
+    margin-left: 10%;
+}
+.list-group-item {
+    max-width: auto;
+} 
+.button-shortcut {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    font-size: 0.75rem !important;
+    background-color: #e9ecef !important;
+    border-color: #ced4da !important;
+    border-radius: 0rem 0.25rem 0.25rem 0rem !important;
+    border-left:none !important
+}
+.button-shortcut:hover {
+    cursor:pointer;
+    color: black !important;
+    background-color: #d1d1d1 !important;
+}
+.button-shortcut:focus {
+    box-shadow: none !important;
+}
+.input-button {
+    width: 100%;
+    height: 1.8rem;
+    border-color: #ced4da !important;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+    font-size: 14px;
+
+}
+.input-text {
+    width: 100%;
+    height: 1.8rem;
+    overflow: hidden;
+    resize: none;
+    font-size: 14px;
+}
+.justify-content-start {
+    margin-bottom: 0.25rem;
+}
+.btn-group-vertical {
+    max-width: 20%;
+}
+#configure, #clear, #about,#shortcutClose,#saveShortcuts {
+    line-height: 1rem !important;
+}
+
+.kftime-text {
+    width: 70%;
+    font-size: 0.8rem !important;
+    padding: 0rem 0.75rem !important
+}
+.kftime {
+    width: 15%;
+    font-size: 0.7rem;
+}
+.clone {
+    padding: 0.5rem 0rem 0rem 0rem;
+}

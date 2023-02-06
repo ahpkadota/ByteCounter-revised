@@ -1,0 +1,81 @@
+{
+    "manifest_version": 3,
+    "author": "Akiro Kadota",
+    "homepage_url": "https://github.com/ahpkadota/JetTag",
+    "name": "ByteCounter",
+    "version": "1.0",
+    "description": "for testing.",
+    "background": {
+        "service_worker": "service-worker.js"
+    },
+    "commands": {
+        "0": {
+            "description": "Paste tags automatically"
+        },
+        "1": {
+            "description": "Shortcut1"
+        },
+        "2": {
+            "description": "Shortcut2"
+        },
+        "3": {
+            "description": "Shortcut3"
+        },
+        "4": {
+            "description": "Shortcut4"
+        },
+        "5": {
+            "description": "Shortcut5"
+        },
+        "6": {
+            "description": "Shortcut6"
+        }
+    },
+    "action": {
+        "default_popup": "popup.html",
+        "default_icon": {
+            "16": "images/icon16.png",
+            "24": "images/icon24.png",
+            "32": "images/icon32.png"
+        }
+    },
+    "content_scripts": [
+        {
+            "matches":  ["https://tcs-sg.bytedance.net/workprocess/*", "https://rock-va.bytedance.net/appeal_center/workbench*"],
+            "js": [
+                "content.js", 
+                "datatables.min.js", 
+                "bootstrap.min.js", 
+                "dataTables.select.min.js", 
+                "dataTables.searchPanes.min.js", 
+                "jquery.dataTables.min.js", 
+                "jquery-3.6.3.min.js"
+            ],
+            "css": [
+                "datatables.min.css", 
+                "bootstrap.min.css",   
+                "jquery.dataTables.min.css", 
+                "select.dataTables.min.css", 
+                "searchPanes.dataTables.min.css"
+            ]
+        }
+    ],
+    "web_accessible_resources": [
+        {
+            "matches": ["<all_urls>"],
+            "resources": ["images/icon32.png", "inject.js", "bytecounter-form.html"]
+        }
+        
+    ],
+    "host_permissions": ["<all_urls>"],
+    
+    "permissions": [
+        "tabs",
+        "storage",
+        "scripting",
+        "webRequest",
+        "activeTab",
+        "declarativeNetRequest"
+    ]
+    
+}

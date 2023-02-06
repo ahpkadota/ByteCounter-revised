@@ -1,0 +1,45 @@
+
+        <div style="
+    padding: 10px;
+    margin: 10px;
+    border-radius: 10px;
+    background-color: ghostwhite;
+">
+  <div style="
+    display: flex;
+    align-items: center;
+">
+    <div style="
+    width: 70%;
+">
+      <label for="diffRange" class="form-label">Difficulty (from 1 to 5)</label>
+      <br>
+      <input id="diffRange" style="width:100%;" type="range" max="5" min="1" class="difficulty" value="1">
+    </div>
+    <div style="
+    width: 30%;
+    display: flex;
+    justify-content: space-evenly;
+">
+      <label for="escalateButton" class="form-label">Escalate?</label>
+      <input id="escalateButton" type="checkbox" class="escalateButton" style="
+    scale: 1.5;
+">
+    </div>
+  </div>
+  <br>
+  <div class="general">
+    <div>
+      <button class="add">ADD</button>
+    </div>
+    <div id="selector" class="selector">
+      <a>Policy: </a>
+      <input class="policy" type="text" list="">
+      <datalist id="" class="policyDatalist"></datalist>
+      <a>Cluster: </a>
+      <input class="clusterDatalist" type="text" list="">
+      <datalist class="clusters" id=""></datalist>
+      <button class="remove" style="display:none;">REMOVE</button>
+    </div>
+  </div>
+</div>

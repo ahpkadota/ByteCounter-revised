@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<link href="popup.css" rel="stylesheet"/>
+<script src="popup.js"></script>
+<script src="jsQR.js"></script>
+<script type="text/javascript" src="jquery-3.6.3.min.js"></script>
+
+<link href="datatables.min.css" rel="stylesheet"/>
+<link href="select.dataTables.min.css" rel="stylesheet"/>
+<link href="searchPanes.dataTables.min.css" rel="stylesheet"/>
+<link href="bootstrap.min.css" rel="stylesheet"/>
+
+<script type="text/javascript" src="datatables.min.js"></script>
+<script type="text/javascript" src="dataTables.select.min.js"></script>
+<script type="text/javascript" src="dataTables.searchPanes.min.js"></script>
+
+<script type="text/javascript" src="bootstrap.min.js"></script>
+<body>
+<div class="position-fixed top-0  start-50 translate-middle-x" style="z-index: 11;">
+  <div id="liveToast" class="toast" style="width: auto" role="alert" aria-live="assertive" aria-atomic="true" data-bs-delay="2000">
+    <div class="toast-body"></div>
+  </div>
+</div>
+<ul class="nav nav-tabs" style="margin-bottom: 1rem" id="myTab" role="tablist">
+  <li class="nav-item" role="presentation">
+    <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home-tab-pane" type="button" role="tab" aria-controls="home-tab-pane" aria-selected="true">Table</button>
+  </li>
+  <li class="nav-item" role="presentation">
+    <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile-tab-pane" type="button" role="tab" aria-controls="profile-tab-pane" aria-selected="false">Counter</button>
+  </li>
+  <li class="nav-item" role="presentation">
+    <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact-tab-pane" type="button" role="tab" aria-controls="contact-tab-pane" aria-selected="false">Options</button>
+  </li>
+  <li class="nav-item" role="presentation">
+    <button class="nav-link" id="bi-tab" data-bs-toggle="tab" data-bs-target="#bi-tab-pane" type="button" role="tab" aria-controls="bi-tab-pane" aria-selected="false">Options</button>
+  </li>
+</ul>
+<div class="tab-content" id="myTabContent">
+  <div class="tab-pane fade show active" id="home-tab-pane" role="tabpanel" aria-labelledby="home-tab" tabindex="0">
+
+    <table id="example" class="display" width="100%"></table>
+
+  
+  </div>
+  <div class="tab-pane fade" id="profile-tab-pane" role="tabpanel" aria-labelledby="profile-tab" tabindex="0">
+    <div style="
+    background-color: lavender;
+    display: flex;
+    align-items: flex-start;
+    margin: 5% 20% 5% 20%;
+    padding: 2%;
+    justify-content: space-around;
+    font-weight: bold;
+    font-size: large;
+"><a>COUNT TO DATE
+</a><a id="count">0</a></div>
+    <div id="carouselExample" class="carousel slide">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">DATE</th>
+                <th scope="col">TICKETS</th>
+              </tr>
+            </thead>
+            <tbody id="cpdate">
+            </tbody>
+          </table>
+        </div>
+        <div class="carousel-item">
+          <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">QUEUE</th>
+                <th scope="col">TICKETS</th>
+              </tr>
+            </thead>
+            <tbody id="cpqueue">
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+  </div>
+  <div class="tab-pane fade" id="contact-tab-pane" role="tabpanel" aria-labelledby="contact-tab" tabindex="0">
+    <div>
+      <p>MISC OPTIONS:</p>
+      <button id="download">DOWNLOAD CSV</button>
+      <input id="inputPolicy"></input>
+      <button id="save">SAVE</button>
+    </div>
+    <div>
+      <p id="clusterView"></p>
+    </div>
+    
+    <button id="reset">RESET</button>  
+    <button id="logPolicy">LOG POLICY DATA</button>  
+    <button id="logVideo">LOG VIDEO DATA</button>  
+  </div>
+  <div class="tab-pane fade" id="bi-tab-pane" role="tabpanel" aria-labelledby="bi-tab" tabindex="0">
+    <div>
+      <p>MISC OPTIONS:</p>
+    </div>
+    <input id="inputScript" type="textarea"> </input>
+    <button id="saveScript">save</button>
+    <button id="logScript">log</button>
+  </div>
+</div>
+
+
+
+
+</body>
+</html>
+
+
